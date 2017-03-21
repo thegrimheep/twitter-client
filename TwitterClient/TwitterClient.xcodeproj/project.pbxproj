@@ -16,6 +16,7 @@
 		A1FEB2811E805410000F4FBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FEB2801E805410000F4FBC /* User.swift */; };
 		A1FEB2831E806D60000F4FBC /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FEB2821E806D60000F4FBC /* JSONParser.swift */; };
 		A1FEB2851E807817000F4FBC /* HomeTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FEB2841E807817000F4FBC /* HomeTimelineViewController.swift */; };
+		A1FEB2871E819EA3000F4FBC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FEB2861E819EA3000F4FBC /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A1FEB2801E805410000F4FBC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A1FEB2821E806D60000F4FBC /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		A1FEB2841E807817000F4FBC /* HomeTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTimelineViewController.swift; sourceTree = "<group>"; };
+		A1FEB2861E819EA3000F4FBC /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,17 +66,42 @@
 		A1FEB2691E803F69000F4FBC /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
-				A1FEB2841E807817000F4FBC /* HomeTimelineViewController.swift */,
-				A1FEB27E1E8053F1000F4FBC /* Tweet.swift */,
-				A1FEB2821E806D60000F4FBC /* JSONParser.swift */,
-				A1FEB2801E805410000F4FBC /* User.swift */,
+				A1FEB2891E81D3C6000F4FBC /* Model */,
+				A1FEB2881E81D394000F4FBC /* View */,
+				A1FEB28A1E81D3D3000F4FBC /* Controller */,
 				A1FEB26A1E803F69000F4FBC /* AppDelegate.swift */,
-				A1FEB26E1E803F69000F4FBC /* Main.storyboard */,
 				A1FEB2711E803F69000F4FBC /* Assets.xcassets */,
-				A1FEB2731E803F69000F4FBC /* LaunchScreen.storyboard */,
 				A1FEB2761E803F69000F4FBC /* Info.plist */,
 			);
 			path = TwitterClient;
+			sourceTree = "<group>";
+		};
+		A1FEB2881E81D394000F4FBC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1FEB26E1E803F69000F4FBC /* Main.storyboard */,
+				A1FEB2731E803F69000F4FBC /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A1FEB2891E81D3C6000F4FBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1FEB2801E805410000F4FBC /* User.swift */,
+				A1FEB27E1E8053F1000F4FBC /* Tweet.swift */,
+				A1FEB2821E806D60000F4FBC /* JSONParser.swift */,
+				A1FEB2861E819EA3000F4FBC /* API.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A1FEB28A1E81D3D3000F4FBC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A1FEB2841E807817000F4FBC /* HomeTimelineViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +182,7 @@
 				A1FEB2831E806D60000F4FBC /* JSONParser.swift in Sources */,
 				A1FEB27F1E8053F1000F4FBC /* Tweet.swift in Sources */,
 				A1FEB26B1E803F69000F4FBC /* AppDelegate.swift in Sources */,
+				A1FEB2871E819EA3000F4FBC /* API.swift in Sources */,
 				A1FEB2851E807817000F4FBC /* HomeTimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

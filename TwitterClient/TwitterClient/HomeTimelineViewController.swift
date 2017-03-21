@@ -11,25 +11,27 @@ import UIKit
 class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-	var tweetLoader = [Tweet]()
+	var tweetLoader = [Tweet]() {
+		didSet {
+			self.tableView.reloadData()
+		}
+	}
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
 		
+		updateTimeLine()
 		
-		JSONParser.tweetsFrom(data: JSONParser.sampleJSONData) { (success, tweets) in
-			if(success) {
-				guard let tweets = tweets else {
-					fatalError("Tweets came bck nil")
-				}
-				for tweet in tweets {
-					tweetLoader.append(tweet)
-					print(tweet.text)	
-				}
-			}
-		}
     }
+	func updateTimeLine() {
+		API.shared.getTweets { (tweets) in
+			OperationQueue.main.addOperation {
+				self.tweetLoader = tweets ?? []
+			}
+			
+		}
+	}
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return tweetLoader.count
 	}
