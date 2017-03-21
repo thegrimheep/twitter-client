@@ -16,6 +16,7 @@
 		A1FEB2811E805410000F4FBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FEB2801E805410000F4FBC /* User.swift */; };
 		A1FEB2831E806D60000F4FBC /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FEB2821E806D60000F4FBC /* JSONParser.swift */; };
 		A1FEB2851E807817000F4FBC /* HomeTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FEB2841E807817000F4FBC /* HomeTimelineViewController.swift */; };
+		A1FEB2871E819EA3000F4FBC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FEB2861E819EA3000F4FBC /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A1FEB2801E805410000F4FBC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A1FEB2821E806D60000F4FBC /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		A1FEB2841E807817000F4FBC /* HomeTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTimelineViewController.swift; sourceTree = "<group>"; };
+		A1FEB2861E819EA3000F4FBC /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				A1FEB2841E807817000F4FBC /* HomeTimelineViewController.swift */,
 				A1FEB27E1E8053F1000F4FBC /* Tweet.swift */,
 				A1FEB2821E806D60000F4FBC /* JSONParser.swift */,
+				A1FEB2861E819EA3000F4FBC /* API.swift */,
 				A1FEB2801E805410000F4FBC /* User.swift */,
 				A1FEB26A1E803F69000F4FBC /* AppDelegate.swift */,
 				A1FEB26E1E803F69000F4FBC /* Main.storyboard */,
@@ -155,6 +158,7 @@
 				A1FEB2831E806D60000F4FBC /* JSONParser.swift in Sources */,
 				A1FEB27F1E8053F1000F4FBC /* Tweet.swift in Sources */,
 				A1FEB26B1E803F69000F4FBC /* AppDelegate.swift in Sources */,
+				A1FEB2871E819EA3000F4FBC /* API.swift in Sources */,
 				A1FEB2851E807817000F4FBC /* HomeTimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
