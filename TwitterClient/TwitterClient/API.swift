@@ -12,6 +12,7 @@ import Social
 
 typealias AccountCallback = (ACAccount?) -> ()  //for multiple account this will return an optional [AXAccounts] of accounts
 typealias UserCallback = (User?) -> ()
+
 typealias TweetsCallback = ([Tweet]?) -> ()
 
 class API {
@@ -61,12 +62,17 @@ class API {
 				}
 				switch response.statusCode {
 				case 200...299:
-					if let userJSON = try! JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-						let user = User(json: userJSON)
-						callback(user)
-					}
+					JSONParser.userReturn(data: data, callback: { (success, user) in
+							callback(user)
+					})
+				
+				case 400...499:
+					print("Error: Client Error")
+					
+				case 500...599:
+					print("Error: Server error")
+					
 				default:
-					print("Error: response came back with statusCode: \(response.statusCode)")
 					callback(nil)
 				}
 			})
@@ -103,8 +109,8 @@ class API {
 							print("Something went wrong")
 							callback(nil)
 						}
-			})
-		}
+				})
+			}
 		
 	}
 	
