@@ -17,8 +17,9 @@ class TweetDetailViewController: UIViewController {
 		
 		self.tweetDis.text = tweet.text
 		self.tweetUser.text = tweet.user?.name
+		self.retweetedNum.text = ("Retweets: \(self.tweet.retweets)")
 		//Lab work here
-		print(self.tweet.user?.name ?? "Unknown")
+		//print(self.tweet.user?.name ?? "Unknown")
 		//print(self.tweet.text)
 
 		
@@ -26,7 +27,6 @@ class TweetDetailViewController: UIViewController {
 
 
 	@IBOutlet weak var tweetDis: UILabel!
-	
-
 	@IBOutlet weak var tweetUser: UILabel!
+	@IBOutlet weak var retweetedNum: UILabel!
 }

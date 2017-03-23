@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -93,14 +94,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweetDis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go2-GJ-Mod">
-                                <rect key="frame" x="19" y="100.5" width="337.5" height="333.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweetDis" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go2-GJ-Mod">
+                                <rect key="frame" x="19" y="101" width="338" height="334"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweetUser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKg-Cs-s9J">
-                                <rect key="frame" x="19" y="72" width="337.5" height="20.5"/>
+                                <rect key="frame" x="19" y="72" width="338" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="retweetNum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ux9-VM-hbf">
+                                <rect key="frame" x="16" y="504" width="702" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="kQV-wD-okD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,15 +119,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Go2-GJ-Mod" firstAttribute="top" secondItem="GKg-Cs-s9J" secondAttribute="bottom" constant="8" id="2bl-Us-2bK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ux9-VM-hbf" secondAttribute="trailing" multiplier="0.5" id="3LJ-zl-KYl"/>
                             <constraint firstItem="Go2-GJ-Mod" firstAttribute="width" secondItem="CvO-lR-PYy" secondAttribute="width" multiplier="0.9" id="8Cp-rq-VsR"/>
                             <constraint firstItem="Go2-GJ-Mod" firstAttribute="centerX" secondItem="CvO-lR-PYy" secondAttribute="centerX" id="BBV-k2-E4a"/>
                             <constraint firstItem="GKg-Cs-s9J" firstAttribute="top" secondItem="k79-31-I2b" secondAttribute="bottom" constant="8" id="LW7-Oo-OPy"/>
+                            <constraint firstItem="Ux9-VM-hbf" firstAttribute="leading" secondItem="CvO-lR-PYy" secondAttribute="leadingMargin" id="Mq7-xN-MUH"/>
                             <constraint firstItem="Go2-GJ-Mod" firstAttribute="height" secondItem="CvO-lR-PYy" secondAttribute="height" multiplier="0.5" id="N5Y-QK-0L5"/>
                             <constraint firstItem="GKg-Cs-s9J" firstAttribute="width" secondItem="CvO-lR-PYy" secondAttribute="width" multiplier="0.9" id="UdG-0j-Xvp"/>
                             <constraint firstItem="GKg-Cs-s9J" firstAttribute="centerX" secondItem="CvO-lR-PYy" secondAttribute="centerX" id="dj8-gC-SIo"/>
+                            <constraint firstItem="Ux9-VM-hbf" firstAttribute="top" secondItem="Go2-GJ-Mod" secondAttribute="bottom" constant="69" id="fjg-VI-MqW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="retweetedNum" destination="Ux9-VM-hbf" id="aCV-AF-b9Q"/>
                         <outlet property="tweetDis" destination="Go2-GJ-Mod" id="zPs-Vg-NlW"/>
                         <outlet property="tweetUser" destination="GKg-Cs-s9J" id="3md-dB-eVB"/>
                     </connections>
