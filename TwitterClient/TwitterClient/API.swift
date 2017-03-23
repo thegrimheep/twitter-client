@@ -6,14 +6,13 @@
 //  Copyright © 2017 David Porter. All rights reserved.
 //
 
-import Foundation
-import Accounts
 import Social
+import Accounts
+import Foundation
 
-typealias AccountCallback = (ACAccount?) -> ()  //for multiple account this will return an optional [AXAccounts] of accounts
 typealias UserCallback = (User?) -> ()
-
 typealias TweetsCallback = ([Tweet]?) -> ()
+typealias AccountCallback = (ACAccount?) -> ()  //for multiple account this will return an optional [AXAccounts] of accounts
 
 class API {
 	static let shared = API()
@@ -63,9 +62,9 @@ class API {
 				switch response.statusCode {
 				case 200...299:
 					JSONParser.userReturn(data: data, callback: { (success, user) in
-							callback(user)
+						callback(user)
 					})
-				
+					
 				case 400...499:
 					print("Error: Client Error")
 					
@@ -99,18 +98,18 @@ class API {
 					return
 				}
 				if response.statusCode >= 200 && response.statusCode < 300 {
-							JSONParser.tweetsFrom(data: data, callback: { (success, tweets) in
-								if success {
-									callback(tweets)
-								}
-							})
+					JSONParser.tweetsFrom(data: data, callback: { (success, tweets) in
+						if success {
+							callback(tweets)
 						}
-						else {
-							print("Something went wrong")
-							callback(nil)
-						}
-				})
-			}
+					})
+				}
+				else {
+					print("Something went wrong")
+					callback(nil)
+				}
+			})
+		}
 		
 	}
 	
