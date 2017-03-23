@@ -15,13 +15,18 @@ class TweetDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		self.tweetDis.text = tweet.text
+		self.tweetUser.text = tweet.user?.name
 		//Lab work here
 		print(self.tweet.user?.name ?? "Unknown")
-		print(self.tweet.text)
+		//print(self.tweet.text)
 
 		
     }
 
 
+	@IBOutlet weak var tweetDis: UILabel!
+	
 
+	@IBOutlet weak var tweetUser: UILabel!
 }
