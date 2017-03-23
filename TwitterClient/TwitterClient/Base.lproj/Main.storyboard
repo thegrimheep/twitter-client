@@ -26,12 +26,23 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WfE-1j-Tz9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleAspectFit" id="Sv4-br-zIl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tamarack" translatesAutoresizingMaskIntoConstraints="NO" id="alE-Yh-vY5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="2mF-Nd-nge" customClass="TweetCell" customModule="TwitterClient" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="113" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2mF-Nd-nge" id="pJS-cf-CvK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV2-nR-P7Y">
@@ -50,7 +61,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="tweetText" destination="PV2-nR-P7Y" id="BSQ-eP-5bm"/>
-                                            <segue destination="jps-cu-uIQ" kind="show" identifier="showDetailSegue" id="eZw-4S-X45"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -76,6 +86,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="cUp-hI-ZRv" id="DuD-Qv-uLJ"/>
                         <outlet property="tableView" destination="WfE-1j-Tz9" id="RgK-Km-lDg"/>
+                        <segue destination="jps-cu-uIQ" kind="show" identifier="TweetDetailViewController" id="cef-O7-g35"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -159,4 +170,7 @@
             <point key="canvasLocation" x="-484" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tamarack" width="3839" height="1262"/>
+    </resources>
 </document>
