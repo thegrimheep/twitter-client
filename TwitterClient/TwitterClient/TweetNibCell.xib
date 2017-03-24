@@ -42,11 +42,13 @@
                     <constraint firstItem="fKR-ah-mEn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="NiI-1D-aBY"/>
                     <constraint firstItem="CBu-tq-dXl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Pa1-cS-fLK"/>
                     <constraint firstItem="CBu-tq-dXl" firstAttribute="leading" secondItem="fKR-ah-mEn" secondAttribute="trailing" constant="8" id="QJm-UZ-Bbr"/>
+                    <constraint firstItem="fKR-ah-mEn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="TEc-iI-E5X"/>
                     <constraint firstItem="fKR-ah-mEn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Z5k-ya-zVM"/>
                     <constraint firstItem="fKR-ah-mEn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="dO2-CE-zsc"/>
                     <constraint firstItem="qBE-iL-bRI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="101" id="jEQ-4n-GFo"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qBE-iL-bRI" secondAttribute="bottom" constant="8" id="r1K-ye-1Gt"/>
                     <constraint firstItem="qBE-iL-bRI" firstAttribute="top" secondItem="CBu-tq-dXl" secondAttribute="bottom" constant="8" id="sOW-Bs-3bB"/>
+                    <constraint firstAttribute="bottom" secondItem="fKR-ah-mEn" secondAttribute="bottom" constant="5.5" id="wmW-c8-i79"/>
                     <constraint firstAttribute="trailing" secondItem="qBE-iL-bRI" secondAttribute="trailing" constant="8" id="zTy-fh-MDJ"/>
                 </constraints>
             </tableViewCellContentView>
